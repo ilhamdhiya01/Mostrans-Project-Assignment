@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import toast from 'react-hot-toast';
 
 export type Character = {
@@ -26,6 +27,7 @@ export const saveLocationToStorage = (location: any) => {
   const locationExists = locations.some((loc) => loc.locationName === location.locationName);
 
   if (locationExists) {
+    toast.error('Location already exist');
     return false;
   }
 

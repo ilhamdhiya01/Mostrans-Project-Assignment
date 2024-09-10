@@ -22,11 +22,11 @@ const ListCharacterByLocationPage: React.FC<DetailAppPageProps> = ({ params }) =
   useEffect(() => {
     const storedLocations = getLocationsFromStorage();
     setLocationsFromLocalstorage(storedLocations);
-  }, []);
+  }, [setLocationsFromLocalstorage]);
 
   const handleBackToCharacterList = useCallback(() => {
     router.push(PATH_PAGE_LIST_LOCATION);
-  }, []);
+  }, [router]);
 
   return (
     <>
